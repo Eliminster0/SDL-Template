@@ -1,0 +1,5 @@
+﻿  stdafx.cpp
+  Start.cpp
+Start.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:LBR' specification
+  Start.vcxproj -> C:\Users\Matt\Desktop\Start\Debug\Start.exe
+  Start.vcxproj -> C:\Users\Matt\Desktop\Start\Debug\Start.pdb (Full PDB)
