@@ -1,33 +1,23 @@
 #include "stdafx.h"
 #include "Game.h"
 
-Game* Game::Instance = 0;
+// initialize the game to zero
+// the instance function will then 
+// create the game
+Game* Game::Instance = NULL;
 
-Game::Game() 
-{
-	if (init("Game", 800, 400, 0))
-		setRunning(true);
-	else
-		setRunning(false);
-
-	while (isRunning())
-	{
-		update();
-		draw();
-
-		// Give us time to see the window.
-		SDL_Delay(5000);
-		setRunning(false);
-	}
-
-	clean();
-}
-
+// update function
+// update the logical parts of the game objects
 void Game::update() 
 {
+	/*--------------------------UPDATE HERE-------------------------*/
 	
+
+	/*--------------------------UPDATE HERE-------------------------*/
 }
 
+// draw function
+// draw all the updated game objects
 void Game::draw()
 {
 	// Set the current color
@@ -38,8 +28,6 @@ void Game::draw()
 
 	/*---------------------------DRAW HERE--------------------------*/
 
-
-	
 	
 	/*---------------------------DRAW HERE--------------------------*/
 
@@ -48,24 +36,15 @@ void Game::draw()
 	SDL_RenderPresent(renderer);
 }
 
+// handle events functions
+// get the user inputs and handle them accordingly
 void Game::handleEvents()
 {
-	keystates = SDL_GetKeyboardState(NULL);
-	
-	if (SDL_PollEvent(&event))
-	{
-		switch (event.type)
-		{
-			case SDL_QUIT:
-				setRunning(false);
-				break;
-			default:
-				break;
-		}
-	}
+	TheInputHandler::instance()->update();
 }
 
-
+// initialization function
+// start up subsystems and load assests
 bool Game::init(const char* title, int height, int width, int flags)
 {
 	// Initialize SDL.
@@ -83,18 +62,33 @@ bool Game::init(const char* title, int height, int width, int flags)
 	/*---------------------------LOAD HERE--------------------------*/
 
 
-
-
 	/*---------------------------LOAD HERE--------------------------*/
 
 	return true;
 }
 
+// clean up function
+// release the allocations
 void Game::clean() 
 {
+	TheInputHandler::instance()->clean();
+
 	SDL_DestroyWindow(window);  
 	SDL_DestroyRenderer(renderer);
-	
+
 	//Quit SDL 
 	SDL_Quit();
+}
+
+void Game::start()
+{
+	// if the game was successfully started
+	if (init("Game", 800, 400, 0))
+		// allow the program to enter 
+		// the game loop
+		setRunning(true);
+	else
+		// if not the skip over 
+		// the game loop
+		setRunning(false);
 }

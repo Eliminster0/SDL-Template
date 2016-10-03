@@ -6,21 +6,21 @@ using namespace std;
 
 TextureManager* TextureManager::Instance = 0;
 
-bool TextureManager::load(std::string fileName, std::string  id, SDL_Renderer* pRenderer)
+bool TextureManager::load(std::string fileName, std::string  id, SDL_Renderer* renderer)
 {
 
-	SDL_Surface* pTempSurface = IMG_Load(fileName.c_str());
+	SDL_Surface* TempSurface = IMG_Load(fileName.c_str());
 
-	if (pTempSurface == 0) { return false; }
+	if (TempSurface == 0) { return false; }
 
-	SDL_Texture* pTexture = SDL_CreateTextureFromSurface(pRenderer, pTempSurface);
+	SDL_Texture* Texture = SDL_CreateTextureFromSurface(renderer, TempSurface);
 
-	SDL_FreeSurface(pTempSurface);
+	SDL_FreeSurface(TempSurface);
 
 	// everything went ok, add the texture to our list  
-	if(pTexture != 0)  
+	if(Texture != 0)  
 	{    
-		m_textureMap[id] = pTexture;    
+		textureMap[id] = Texture;    
 		return true;  
 	}
 
@@ -28,7 +28,7 @@ bool TextureManager::load(std::string fileName, std::string  id, SDL_Renderer* p
 	return false; 
 } 
 
-void TextureManager::draw(string id, int x, int y, int  width, int height, SDL_Renderer* pRenderer, SDL_RendererFlip flip) 
+void TextureManager::draw(string id, int x, int y, int  width, int height, SDL_Renderer* renderer, SDL_RendererFlip flip) 
 {
 	SDL_Rect srcRect, destRect;
 	
@@ -40,11 +40,11 @@ void TextureManager::draw(string id, int x, int y, int  width, int height, SDL_R
 	destRect.x = x;  
 	destRect.y = y;
 	
-	SDL_RenderCopyEx(pRenderer, m_textureMap[id], &srcRect, &destRect, 0, 0, flip);
+	SDL_RenderCopyEx(renderer, textureMap[id], &srcRect, &destRect, 0, 0, flip);
 }
 
 void TextureManager::drawFrame(string id, int x, int y, int width, int height, int currentRow, 
-							   int currentFrame, SDL_Renderer *pRenderer, SDL_RendererFlip flip) 
+							   int currentFrame, SDL_Renderer *renderer, SDL_RendererFlip flip) 
 {
 	SDL_Rect srcRect, destRect;  
 	
@@ -56,5 +56,5 @@ void TextureManager::drawFrame(string id, int x, int y, int width, int height, i
 	destRect.x = x;  
 	destRect.y = y;
 	
-	SDL_RenderCopyEx(pRenderer, m_textureMap[id], &srcRect, &destRect, 0, 0, flip);
+	SDL_RenderCopyEx(renderer, textureMap[id], &srcRect, &destRect, 0, 0, flip);
 }

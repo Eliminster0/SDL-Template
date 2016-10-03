@@ -21,9 +21,12 @@ class LoaderParams {
 		
 		int getX() const { return x; }  
 		int getY() const { return y; }  
+		
 		int getWidth() const { return  width;  }  
 		int getHeight() const { return height; }  
+		
 		char* getTextureID() const { return textureID; }
+
 	private:
 		
 		int x;  

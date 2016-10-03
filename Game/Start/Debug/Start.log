@@ -1,0 +1,14 @@
+﻿  Game.cpp
+c:\users\matt\desktop\sdl-template\game\start\game.h(15): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  Generating Code...
+  Compiling...
+  Start.cpp
+c:\users\matt\desktop\sdl-template\game\start\game.h(15): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  InputHandler.cpp
+c:\users\matt\desktop\sdl-template\game\start\game.h(15): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+c:\users\matt\desktop\sdl-template\game\start\inputhandler.cpp(64): warning C4244: 'argument': conversion from 'Sint32' to 'float', possible loss of data
+c:\users\matt\desktop\sdl-template\game\start\inputhandler.cpp(65): warning C4244: 'argument': conversion from 'Sint32' to 'float', possible loss of data
+  Generating Code...
+Game.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:LBR' specification
+  Start.vcxproj -> C:\Users\Matt\Desktop\SDL-Template\Game\Debug\Start.exe
+  Start.vcxproj -> C:\Users\Matt\Desktop\SDL-Template\Game\Debug\Start.pdb (Full PDB)
