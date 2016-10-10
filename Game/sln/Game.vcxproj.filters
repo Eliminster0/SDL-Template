@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\singleton">
+      <UniqueIdentifier>{38d82842-1450-4905-ae2b-9125aa803545}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\singleton">
+      <UniqueIdentifier>{fea44492-a76e-474f-a87c-3a1a7e9bf04b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\state">
+      <UniqueIdentifier>{fd62be0a-9b4d-4cea-86bd-f2d79bf018ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\state">
+      <UniqueIdentifier>{482cf36d-8e0f-47da-b62a-69f99dca33e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\math">
+      <UniqueIdentifier>{aa6f4be8-604e-47f3-9fba-4461ef4f0dfa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\object">
+      <UniqueIdentifier>{23de8309-2724-40f8-9174-b9e9325440e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\map">
+      <UniqueIdentifier>{67fc9cd9-6737-4d87-8844-e1f76adabeb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\xml">
+      <UniqueIdentifier>{f3fec968-c7a0-4159-92c2-7c50cff59ec1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\xml">
+      <UniqueIdentifier>{641a19a8-8a5a-486a-b2e6-41c9034d4cc4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\map">
+      <UniqueIdentifier>{88f66a1f-e416-49d6-9b6c-f6df7b135202}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\zlib">
+      <UniqueIdentifier>{b4db6134-92d9-4341-9dc8-426070116c70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\zlib">
+      <UniqueIdentifier>{67a6ac44-3302-4fa7-a699-75ee0b4b2fe4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\math">
+      <UniqueIdentifier>{933d5204-b3cd-415e-9ec9-61c1968c6832}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\src\Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\src\singleton\Game.cpp">
+      <Filter>Source Files\singleton</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\src\singleton\GameObjectFactory.cpp">
+      <Filter>Source Files\singleton</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\src\singleton\GameStateMachine.cpp">
+      <Filter>Source Files\singleton</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\src\singleton\InputHandler.cpp">
+      <Filter>Source Files\singleton</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\src\singleton\SoundManager.cpp">
+      <Filter>Source Files\singleton</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\src\singleton\TextureManager.cpp">
+      <Filter>Source Files\singleton</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\src\state\MenuState.cpp">
+      <Filter>Source Files\state</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\src\state\PlayState.cpp">
+      <Filter>Source Files\state</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\src\xml\tinystr.cpp">
+      <Filter>Source Files\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\src\xml\tinyxml.cpp">
+      <Filter>Source Files\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\src\xml\tinyxmlerror.cpp">
+      <Filter>Source Files\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\src\xml\tinyxmlparser.cpp">
+      <Filter>Source Files\xml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\src\state\StateParser.cpp">
+      <Filter>Source Files\state</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\src\map\Level.cpp">
+      <Filter>Source Files\map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\src\map\LevelParser.cpp">
+      <Filter>Source Files\map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\src\zlib\base64.cpp">
+      <Filter>Source Files\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\src\map\TileLayer.cpp">
+      <Filter>Source Files\map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\src\map\ObjectLayer.cpp">
+      <Filter>Source Files\map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\src\math\CollisionManager.cpp">
+      <Filter>Source Files\math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\src\singleton\Camera.cpp">
+      <Filter>Source Files\singleton</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\inc\singleton\Game.h">
+      <Filter>Header Files\singleton</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\inc\singleton\GameObjectFactory.h">
+      <Filter>Header Files\singleton</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\inc\singleton\GameStateMachine.h">
+      <Filter>Header Files\singleton</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\inc\singleton\InputHandler.h">
+      <Filter>Header Files\singleton</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\inc\singleton\SoundManager.h">
+      <Filter>Header Files\singleton</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\inc\singleton\TextureManager.h">
+      <Filter>Header Files\singleton</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\inc\state\GameState.h">
+      <Filter>Header Files\state</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\inc\state\MenuState.h">
+      <Filter>Header Files\state</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\inc\state\PlayState.h">
+      <Filter>Header Files\state</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\inc\math\Vector2D.h">
+      <Filter>Header Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\inc\object\GameObject.h">
+      <Filter>Header Files\object</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\inc\singleton\LoaderParams.h">
+      <Filter>Header Files\singleton</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\inc\xml\tinystr.h">
+      <Filter>Header Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\inc\xml\tinyxml.h">
+      <Filter>Header Files\xml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\inc\state\StateParser.h">
+      <Filter>Header Files\state</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\inc\map\Layer.h">
+      <Filter>Header Files\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\inc\map\Level.h">
+      <Filter>Header Files\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\inc\map\TileLayer.h">
+      <Filter>Header Files\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\inc\map\LevelParser.h">
+      <Filter>Header Files\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\inc\zlib\base64.h">
+      <Filter>Header Files\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\inc\zlib\zconf.h">
+      <Filter>Header Files\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\inc\zlib\zlib.h">
+      <Filter>Header Files\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\inc\map\ObjectLayer.h">
+      <Filter>Header Files\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\inc\math\Collision.h">
+      <Filter>Header Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\inc\math\CollisionManager.h">
+      <Filter>Header Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\inc\singleton\Camera.h">
+      <Filter>Header Files\singleton</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
