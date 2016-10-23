@@ -36,7 +36,7 @@ void ObjectLayer::update(Level* pLevel)
             }
             else
             {
-                if((*it)->type() != std::string("Player"))
+                if((*it)->type() != GameObject::ObjectType::PLAYER)
                 {
                     /*(*it)->setUpdating(false);
                     (*it)->scroll(TheGame::Instance()->getScrollSpeed());*/

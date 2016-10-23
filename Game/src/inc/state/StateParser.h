@@ -16,7 +16,7 @@ class StateParser
     
 		bool parseState(
 			const char* stateFile,
-			std::string stateID, 
+			int stateID, 
 			std::vector<GameObject*> *pObjects, 
 			std::vector<std::string> *pTextureIDs
 		);

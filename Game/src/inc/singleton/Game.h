@@ -13,11 +13,12 @@ const int FPS = 60;
 // constant for amount of milliseconds a frame should be ( 16.7ms )
 const int DELAY_TIME = 1000.0f / FPS;
 
-class Game {
+class Game 
+{
 	public:
-	      
+
 	   // initialize the game
-	   bool init(const char* title, int height, int width, int flags);
+	   bool init();
 	   
 	   // update game objects
 	   void update();
@@ -64,14 +65,22 @@ class Game {
 	   // get the renderer for drawing objects
 	   SDL_Renderer* getRenderer() const { return renderer; }
 
+	   // get the game state handler for changing the state of the game
+	   GameStateMachine* getStateMachine() { return m_pGameStateMachine; }
+
 	   // handle for access to the game components
 	   static Game* Instance() 
 	   {
+		   // if there is currently no game object
 		   if (s_pInstance == NULL)
 		   { 
+			   // create the game object
 			   s_pInstance = new Game();
+			   // return the object
 			   return s_pInstance;
 		   }
+		   // there is currently a game object
+		   // return the the object
 		   return s_pInstance;
 	   }
 
@@ -85,6 +94,9 @@ class Game {
 		
 		// flag to control game loop
 		bool running;
+
+		// get the display settings and create window
+		bool setDefaultResolution();
 
 		// screen width
 		int m_gameWidth;
@@ -103,10 +115,11 @@ class Game {
 
 		// pointer to renderer object
 		SDL_Renderer* renderer;
-
-		SDL_AudioSpec obtained;
-
+		
+		// pointer to the game state handler object
 		GameStateMachine* m_pGameStateMachine;
+		
+		SDL_AudioSpec obtained;
 };
 
 typedef Game TheGame;

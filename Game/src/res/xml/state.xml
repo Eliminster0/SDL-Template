@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<States>
+    <MENU type="101">
+        <TEXTURES>
+            <texture filename="../src/res/img/play.png" ID="playbutton"/>
+            <texture filename="../src/res/img/exit.png" ID="exitbutton"/>
+        </TEXTURES>     
+        <OBJECTS>
+            <object type="101" x="860" y="502" width="200" height="50" textureID="playbutton" numFrames="0" callbackID="1"/>
+            <object type="102" x="860" y="572" width="200" height="50" textureID="exitbutton" numFrames="0" callbackID="2"/>
+        </OBJECTS>
+    </MENU>
+    
+    <PLAY type="102">
+        <TEXTURES>
+		<texture filename="../src/res/img/exit.png" ID="exitbutton"/>
+        </TEXTURES>
+        <OBJECTS>
+		<object type="102" x="860" y="540" width="200" height="50" textureID="exitbutton" numFrames="0" callbackID="0"/>
+        </OBJECTS>
+    </PLAY>
+    
+    <PAUSE>
+        <TEXTURES>
+        </TEXTURES>
+        <OBJECTS>
+        </OBJECTS>
+    </PAUSE>
+    
+    <GAMEOVER>
+        <TEXTURES>
+        </TEXTURES>        
+        <OBJECTS>
+        </OBJECTS>
+    </GAMEOVER>
+</States>

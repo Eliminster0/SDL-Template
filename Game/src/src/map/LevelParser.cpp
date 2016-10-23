@@ -120,13 +120,13 @@ void LevelParser::parseObjectLayer(TiXmlElement* pObjectElement, std::vector<Lay
         {
             int x, y, width, height, numFrames, callbackID = 0, animSpeed = 0;
             std::string textureID;
-            std::string type;
+			int type;
             
             // get the initial node values type, x and y
             e->Attribute("x", &x);
             e->Attribute("y", &y);
             
-            type = e->Attribute("type");
+            e->Attribute("type", &type);
             GameObject* pGameObject = TheGameObjectFactory::Instance()->create(type);
             
             // get the property values

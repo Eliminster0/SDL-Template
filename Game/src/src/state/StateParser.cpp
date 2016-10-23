@@ -7,7 +7,7 @@
 using namespace std;
 
 
-bool StateParser::parseState(const char *stateFile, string stateID, vector<GameObject *> *pObjects, std::vector<std::string> *pTextureIDs)
+bool StateParser::parseState(const char *stateFile, int stateID, vector<GameObject *> *pObjects, std::vector<std::string> *pTextureIDs)
 {
 	// create the XML document
 	TiXmlDocument xmlDoc;
@@ -27,7 +27,10 @@ bool StateParser::parseState(const char *stateFile, string stateID, vector<GameO
 	// get this states root node and assing it to pStateRoot
 	for (TiXmlElement* e = pRoot->FirstChildElement(); e != NULL; e = e->NextSiblingElement())
 	{
-		if (e->Value() == stateID)
+		int typeID;
+		e->Attribute("type", &typeID);
+
+		if (typeID == stateID)
 		{
 			pStateRoot = e;
 			break;
@@ -76,6 +79,7 @@ void StateParser::parseTextures(TiXmlElement* pStateRoot, std::vector<std::strin
 	for (TiXmlElement* e = pStateRoot->FirstChildElement(); e != NULL; e = e->NextSiblingElement())
 	{
 		string filenameAttribute = e->Attribute("filename");
+
 		string idAttribute = e->Attribute("ID");
 
 		pTextureIDs->push_back(idAttribute); // push the id into the list
@@ -89,7 +93,7 @@ void StateParser::parseObjects(TiXmlElement *pStateRoot, std::vector<GameObject 
 {
 	for (TiXmlElement* e = pStateRoot->FirstChildElement(); e != NULL; e = e->NextSiblingElement())
 	{
-		int x, y, width, height, numFrames, callbackID, animSpeed;
+		int x, y, width, height, numFrames, callbackID, animSpeed, typeID;
 		string textureID;
 
 		e->Attribute("x", &x);
@@ -99,10 +103,11 @@ void StateParser::parseObjects(TiXmlElement *pStateRoot, std::vector<GameObject 
 		e->Attribute("numFrames", &numFrames);
 		e->Attribute("callbackID", &callbackID);
 		e->Attribute("animSpeed", &animSpeed);
+		e->Attribute("type", &typeID);
 
 		textureID = e->Attribute("textureID");
 		//int x, int y, int width, int height, std::string textureID, int numFrames, void()
-		GameObject* pGameObject = TheGameObjectFactory::Instance()->create(e->Attribute("type"));
+		GameObject* pGameObject = TheGameObjectFactory::Instance()->create(typeID);
 		pGameObject->load(std::unique_ptr<LoaderParams>(new LoaderParams(x, y, width, height, textureID, numFrames, callbackID, animSpeed)));
 		pObjects->push_back(pGameObject);
 	}

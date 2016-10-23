@@ -2,22 +2,24 @@
 #define __MenuState__
 
 #include "GameState.h"
+#include "GameObject.h"
 
 class MenuState : GameState
 {
 	public:
 
-		virtual void update();
-		virtual void render();
-
 		virtual bool onEnter();
 		virtual bool onExit();
 
-		virtual std::string getStateID() const { return s_menuID; }
+		virtual int getStateID() const { return s_menuID; }
 
 	private:
 
-		static const std::string s_menuID;
+		// callback functions for button clicks
+		static void s_menuToPlay();
+		static void s_exitFromMenu();
+
+		static const int s_menuID;
 };
 
 #endif

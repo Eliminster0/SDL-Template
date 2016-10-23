@@ -52,6 +52,24 @@
     <Filter Include="Source Files\math">
       <UniqueIdentifier>{933d5204-b3cd-415e-9ec9-61c1968c6832}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\object\ui">
+      <UniqueIdentifier>{5cb64a87-ce77-408a-a3c2-03d2a09a0052}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\object">
+      <UniqueIdentifier>{72bd494e-eca3-42ac-a32a-bc9ea8ce9ec8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\object\ui">
+      <UniqueIdentifier>{fa218e73-dca9-4607-8e53-0cb509bb44a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\img">
+      <UniqueIdentifier>{b523b37b-0ea4-46c2-9be5-ff66e723d6ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\sound">
+      <UniqueIdentifier>{5135883d-daf4-4c18-90a2-a948cfa763b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\xml">
+      <UniqueIdentifier>{0c224e7c-208b-47d1-a3df-9b06788f4ab0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\src\Main.cpp">
@@ -117,6 +135,18 @@
     <ClCompile Include="..\src\src\singleton\Camera.cpp">
       <Filter>Source Files\singleton</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\src\object\ui\ExitButton.cpp">
+      <Filter>Source Files\object\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\src\object\ui\PlayButton.cpp">
+      <Filter>Source Files\object\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\src\object\ui\Button.cpp">
+      <Filter>Source Files\object\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\src\state\GameState.cpp">
+      <Filter>Source Files\state</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\inc\singleton\Game.h">
@@ -148,9 +178,6 @@
     </ClInclude>
     <ClInclude Include="..\src\inc\math\Vector2D.h">
       <Filter>Header Files\math</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\inc\object\GameObject.h">
-      <Filter>Header Files\object</Filter>
     </ClInclude>
     <ClInclude Include="..\src\inc\singleton\LoaderParams.h">
       <Filter>Header Files\singleton</Filter>
@@ -197,5 +224,33 @@
     <ClInclude Include="..\src\inc\singleton\Camera.h">
       <Filter>Header Files\singleton</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\inc\object\ui\Button.h">
+      <Filter>Header Files\object\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\inc\object\ui\ExitButton.h">
+      <Filter>Header Files\object\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\inc\object\ui\PlayButton.h">
+      <Filter>Header Files\object\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\inc\singleton\Callback.h">
+      <Filter>Header Files\singleton</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\inc\object\GameObject.h">
+      <Filter>Header Files\object</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\src\res\img\exit.png">
+      <Filter>Resource Files\img</Filter>
+    </Image>
+    <Image Include="..\src\res\img\play.png">
+      <Filter>Resource Files\img</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\src\res\xml\state.xml">
+      <Filter>Resource Files\xml</Filter>
+    </Xml>
   </ItemGroup>
 </Project>
